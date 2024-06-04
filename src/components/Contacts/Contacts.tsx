@@ -15,8 +15,11 @@ const Contacts = () => {
         </div>
         <div className="contacts__body">
           <div className="contacts__cv">
-            <button className="contacts__cs-view">view CV</button>
-            <button className="contacts__cs-download">download CV</button>
+            <img src="" alt="" />
+            <div className="contacts__cs_btns">
+              <button className="contacts__cs-view">view CV</button>
+              <button className="contacts__cs-download">download CV</button>
+            </div>
           </div>
           <div className="contacts__list">
             <div className="contacts__item">
