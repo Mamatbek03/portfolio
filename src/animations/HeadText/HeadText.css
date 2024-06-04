@@ -1,0 +1,37 @@
+.wave-hand {
+  width: 52px;
+  height: 52px;
+  animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
+  animation-duration: 5s; /* Change to speed up or slow down */
+  animation-iteration-count: initial; /* Never stop waving :) */
+  transform-origin: 30% 100%; /* Pivot around the bottom-left palm */
+  display: inline-block;
+  margin-bottom: -3px;
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  }
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
