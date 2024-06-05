@@ -15,7 +15,6 @@ const Contacts = () => {
         </div>
         <div className="contacts__body">
           <div className="contacts__cv">
-            <img src="" alt="" />
             <div className="contacts__cs_btns">
               <button className="contacts__cs-view">view CV</button>
               <button className="contacts__cs-download">download CV</button>
