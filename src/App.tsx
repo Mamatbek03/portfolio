@@ -4,38 +4,39 @@ import Home from "./components/Home/Home";
 import About from "./components/About/About";
 import { Element } from "react-scroll";
 import Projcets from "./components/Projects/Projcets";
-import WaveWater from "./animations/WaveWater/WaveWater";
 import Contacts from "./components/Contacts/Contacts";
+import Footer from "./components/Footer/Footer";
 const App = () => {
   if (!localStorage.getItem("theme")) {
     localStorage.setItem("theme", "light");
   }
-  const [isDarkTheme, setDarkTheme] = useState<boolean>(false);
-  console.log(isDarkTheme);
+  console.log(!!localStorage.getItem("theme"));
+  console.log(localStorage.getItem("theme"));
 
-  // function clTheme(num: number, className: string) {
-  //   const themeType = isDarkTheme ? "dark" : "light";
-  //   const suffix = num === 1 ? "first" : num === 2 ? "second" : "third";
-  //   return `${className} ${suffix}-${themeType}`;
-  // }
+  const [isDarkTheme, setDarkTheme] = useState<boolean>(
+    localStorage.getItem("theme") === "dark" || false
+  );
+  const toggleTheme = () => {
+    setDarkTheme((prev) => !prev);
+    localStorage.setItem("theme", isDarkTheme ? "light" : "dark");
+  };
+
   return (
     <>
-      <Navbar setDarkTheme={setDarkTheme} />
+      <Navbar isDarkTheme={isDarkTheme} toggleTheme={toggleTheme} />
       <Element name="home">
-        <Home />
-      </Element>{" "}
-      <WaveWater />
+        <Home isDarkTheme={isDarkTheme} />
+      </Element>
       <Element name="about">
-        <About />
+        <About isDarkTheme={isDarkTheme} />
       </Element>
-      <WaveWater reverse={true} />
       <Element name="projects">
-        <Projcets />
+        <Projcets isDarkTheme={isDarkTheme} />
       </Element>
-      <WaveWater />
       <Element name="contacts">
-        <Contacts />
+        <Contacts isDarkTheme={isDarkTheme} />
       </Element>
+      <Footer />
     </>
   );
 };

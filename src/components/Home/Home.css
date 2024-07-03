@@ -1,10 +1,14 @@
-.home {
+.home,
+.home-dark {
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding-top: 180px;
-  background-color: #eaeaea;
+  background-color: var(--second-light-bc);
+}
+.home-dark {
+  background-color: var(--second-dark-bc);
 }
 .home__person {
   display: flex;
@@ -20,10 +24,17 @@
   max-width: 520px;
 }
 
-.home__job-title {
+.home__job-title,
+.home__job-title-dark {
+  width: 100%;
+  height: 140px;
   font-weight: 800;
   font-size: 3.8rem;
   margin: 20px 0;
+  color: var(--first-light-text-c);
+}
+.home__job-title-dark {
+  color: var(--first-dark-text-c);
 }
 .home__job-waving {
   width: 60px;
@@ -41,7 +52,7 @@
 
   background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmoDdyUGzcWTltc_HjeCVi7-2yGIOjHu3HsA&usqp=CAU");
   animation: morph 20s ease-in-out infinite;
-  border: 3px solid;
+  border: 3px solid var(--first-dark-bc);
   border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
   transition: all 1s ease-in-out;
   background-size: cover;
@@ -49,12 +60,31 @@
   background-position: 50%;
 }
 
-.home__job-ph {
+.home__job-ph,
+.home__job-ph-dark {
   font-size: 18px;
   font-weight: 400;
-  color: #5c5c5c;
   line-height: 1.8rem;
+  color: var(--second-light-text-c);
 }
+.home__job-ph-dark {
+  color: var(--second-dark-text-c);
+}
+.home__job-ph-name {
+  margin: 0 10px;
+  font-weight: 600;
+  color: var(--third-light-blue);
+}
+.home__job-ph-name-dark {
+  margin: 0 10px;
+  font-weight: 600;
+  color: var(--third-dark-blue);
+}
+
+.home__job-ph-name {
+  color: var(--third-light-blue);
+}
+
 .home__job-links {
   gap: 1.3rem;
   margin-top: 2rem;
@@ -62,10 +92,15 @@
 .home__job-link {
   width: 32px;
   height: 32px;
-  cursor: pointer;
   margin: 0 0.6rem;
-  transition: all 0.3s ease-in-out;
+  transition: filter 0.3s ease-in-out;
   cursor: pointer;
+  filter: invert(0%);
+}
+
+.home__job-link:hover {
+  filter: brightness(0) saturate(100%) invert(18%) sepia(88%) saturate(6222%)
+    hue-rotate(200deg) brightness(101%) contrast(101%);
 }
 .home__stack {
   display: flex;
@@ -74,11 +109,16 @@
   gap: 1rem;
   margin: 100px 0;
 }
-.home__stack-title {
+.home__stack-title,
+.home__stack-title-dark {
   font-size: 20px;
   font-weight: 700;
   padding: 15px;
   border-right: 2px solid;
+  color: var(--first-light-text-c);
+}
+.home__stack-title-dark {
+  color: var(--first-dark-text-c);
 }
 .home__stack-icons {
   display: flex;

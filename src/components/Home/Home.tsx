@@ -1,7 +1,13 @@
 import "./Home.css";
-import FlagKyrgyzstan from "../../assets/flagKyrgyzstan.svg";
+
 import GithubLight from "../../assets/github-light.svg";
-import Telegram from "../../assets/telegram.svg";
+import TelegramLight from "../../assets/tg-light.svg";
+import LinkedInLight from "../../assets/linkedin-light.svg";
+import GithubDark from "../../assets/github-dark.svg";
+import TelegramDark from "../../assets/tg-dark.svg";
+import LinkedInDark from "../../assets/linkedin-dark.svg";
+
+import FlagKyrgyzstan from "../../assets/flagKyrgyzstan.svg";
 import JavaScript from "../../assets/javascript.svg";
 import TypeScript from "../../assets/typescript.svg";
 import ReactLight from "../../assets/react-light.svg";
@@ -10,40 +16,79 @@ import Webpack from "../../assets/webpack.svg";
 import ViteLight from "../../assets/vite-light.svg";
 import Html from "../../assets/html.svg";
 import Css from "../../assets/css.svg";
-import HeadText from "../../animations/HeadText/HeadText";
 
-const Home: React.FC = () => {
+import HeadText from "../../animations/HeadText/HeadText";
+import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
+
+interface HomeProps {
+  isDarkTheme: boolean;
+}
+const Home: React.FC<HomeProps> = ({ isDarkTheme }) => {
+  useEffect(() => {
+    if (localStorage.getItem("theme") === "dark") {
+    }
+  }, []);
+
+  const { t } = useTranslation();
+
   return (
-    <div className="home">
+    <div className={isDarkTheme ? "home-dark" : "home"}>
       <div className="home__person">
         <div className="home__job">
           <HeadText
-            className="home__job-title"
+            className={isDarkTheme ? "home__job-title-dark" : "home__job-title"}
             text="Front-end React Developer"
           />
 
-          <p className="home__job-ph">
-            Hi, I'm{" "}
-            <span style={{ color: "blue", fontWeight: "600" }}>
-              Kamytov Mamatbek
+          <p className={isDarkTheme ? "home__job-ph-dark" : "home__job-ph"}>
+            {t("Hi, I'm")}
+            <span
+              className={
+                isDarkTheme ? "home__job-ph-name-dark" : "home__job-ph-name"
+              }
+            >
+              {t("Kamytov Mamatbek")}
             </span>
-            . A passionate Front-end React Developer based in Bishkek,
-            Kyrgyzstan.
+            {t(
+              ". A passionate Front-end React Developer based in Bishkek , Kyrgyzstan."
+            )}
             <img className="home__job-flag" src={FlagKyrgyzstan} alt="" />
           </p>
           <div className="home__job-links">
             <a href="">
-              <img className="home__job-link" src={Telegram} alt="" />
+              <img
+                className="home__job-link"
+                src={isDarkTheme ? TelegramDark : TelegramLight}
+                alt=""
+              />
             </a>
             <a href="">
-              <img className="home__job-link" src={GithubLight} alt="" />
+              <img
+                className="home__job-link"
+                src={isDarkTheme ? GithubDark : GithubLight}
+                alt=""
+              />
+            </a>
+            <a href="">
+              <img
+                className="home__job-link"
+                src={isDarkTheme ? LinkedInDark : LinkedInLight}
+                alt=""
+              />
             </a>
           </div>
         </div>
         <div className="home__job-photo"></div>
       </div>
       <div className="home__stack">
-        <span className="home__stack-title">Tech Stack</span>
+        <span
+          className={
+            isDarkTheme ? "home__stack-title-dark" : "home__stack-title"
+          }
+        >
+          {t("Tech Stack")}
+        </span>
         <ul className="home__stack-icons">
           <li>
             <img className="home__stack-icon" src={Html} alt="" />

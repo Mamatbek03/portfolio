@@ -1,32 +1,80 @@
-.contacts {
+.contacts,
+.contacts-dark {
   width: 100%;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  padding: 100px 0;
+  padding: 100px 0 50px;
+  background-color: var(--first-light-bc);
+}
+.contacts-dark {
+  background-color: var(--first-dark-bc);
 }
 .contacts__content {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+.contacts__head {
+  margin-bottom: 30px;
+}
 .contacts__nav {
   font-size: 1.2rem;
   font-weight: 800;
-  color: blue;
+  color: var(--third-light-blue);
 }
-.contacts__label {
+.contacts__label,
+.contacts__label-dark {
   font-size: 1.8rem;
   font-weight: 700;
+  color: var(--first-light-text-c);
 }
-
+.contacts__label-dark {
+  color: var(--first-dark-text-c);
+}
 .contacts__body {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  gap: 10rem;
+  gap: 7rem;
+}
+
+.contacts__cv-img {
+  width: 250px;
+  border: 2px solid var(--third-light-blue);
+  border-radius: 5px 5px 0 0;
+}
+.contacts__cv-btns {
+  display: flex;
+  justify-content: space-around;
+  margin-top: -6px;
+}
+.contacts__cv-view,
+.contacts__cv-download {
+  width: 50%;
+  font-weight: 500;
+  padding: 10px 0;
+  cursor: pointer;
+  color: var(--first-dark-text-c);
+  background-color: var(--third-light-blue);
+  border: 1px solid var(--third-light-blue);
+  border-top: none;
+  border-radius: 0 0 0 5px;
+}
+.contacts__cv-download {
+  border-radius: 0 0 5px 0;
+}
+.contacts__cv-download:hover,
+.contacts__cv-view:hover {
+  background-color: var(--third-dark-blue);
+}
+.contacts__cv-btns-border {
+  width: 2px;
+  height: 100%;
+  margin-top: -2px;
+  color: white;
 }
 .contacts__item {
   display: flex;
@@ -35,6 +83,34 @@
   gap: 1rem;
 }
 .contacts__contact-img {
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
+}
+.contacts__contact-info {
+  display: flex;
+  font-weight: 500;
+  flex-direction: column;
+  justify-content: center;
+}
+.contacts__contact-title {
+  color: var(--first-light-text-c);
+}
+.contacts__contact-title-dark {
+  color: var(--first-dark-text-c);
+}
+.contacts__contact-link,
+.contacts__contact-link-dark {
+  font-size: 1.2rem;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--second-light-text-c);
+}
+.contacts__contact-link-dark {
+  color: var(--second-dark-text-c);
+}
+.contacts__contact-link:hover,
+.contacts__contact-link-dark:hover {
+  color: blue;
+
+  transition: color 0.3s ease, background-color 0.3s ease;
 }

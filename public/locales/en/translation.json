@@ -1,7 +1,25 @@
 {
-  "language": "русский",
+  "language": "рус",
   "Home": "Home",
   "About me": "About me",
   "Projects": "Projects",
-  "Contacts": "Contacts"
+  "Contacts": "Contacts",
+
+  "Hi, I'm": "Hi, I'm",
+  " Kamytov Mamatbek": " Kamytov Mamatbek",
+  ". A passionate Front-end React Developer based in Bishkek , Kyrgyzstan.": ". A passionate Front-end React Developer based in Bishkek , Kyrgyzstan.",
+
+  "ABOUT ME": "ABOUT ME",
+  "A volved Front-end Developer 👨🏻‍💻": "A volved Front-end Developer 👨🏻‍💻",
+  " As a Junior Front-End Developer, I possess an impressive arsenal of skills in HTML, CSS, JavaScript, React, Tailwind, and SCSS. I excel in designing and maintaining responsive websites that offer a smooth user experience. My expertise lies in crafting dynamic, engaging interfaces through writing clean and optimized code and utilizing cutting-edge development tools and techniques. I am also a team player who thrives in collaborating with cross-functional teams to produce outstanding web applications.": " As a Junior Front-End Developer, I possess an impressive arsenal of skills in HTML, CSS, JavaScript, React, Tailwind, and SCSS. I excel in designing and maintaining responsive websites that offer a smooth user experience. My expertise lies in crafting dynamic, engaging interfaces through writing clean and optimized code and utilizing cutting-edge development tools and techniques. I am also a team player who thrives in collaborating with cross-functional teams to produce outstanding web applications.",
+
+  "PROJECTS": "PROJECTS",
+  "Each project is a unique piece of development 🧩": "Each project is a unique piece of development 🧩",
+
+  "CONTACTS": "CONTACTS",
+  "I'd love to hear from you! Drop me a line! 👇": "I'd love to hear from you! Drop me a line! 👇",
+  "Mail": "Mail",
+  "Phone": "Phone",
+  "view": "view",
+  "download": "download"
 }

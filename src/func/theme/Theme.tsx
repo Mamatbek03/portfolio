@@ -1,34 +1,24 @@
-import { useState } from "react";
 import darkTheme from "../../assets/darkTheme.svg";
 import lightTheme from "../../assets/lightTheme.svg";
 import "./Theme.css";
 
 interface ThemeProps {
-  setDarkTheme: React.Dispatch<React.SetStateAction<boolean>>;
+  isDarkTheme: boolean;
+  toggleTheme: () => void;
 }
 
-const Theme: React.FC<ThemeProps> = ({ setDarkTheme }) => {
-  const [isDark, setDark] = useState<boolean>(false);
-  const toggleTheme = () => {
-    setDarkTheme((prev: boolean) => {
-      setDark(!prev);
-      const newTheme = !prev ? "dark" : "light";
-      localStorage.setItem("theme", newTheme);
-      return !prev;
-    });
-  };
-
+const Theme: React.FC<ThemeProps> = ({ isDarkTheme, toggleTheme }) => {
   return (
     <div>
       <input id="checkbox" type="checkbox" />
       <label
         onClick={toggleTheme}
-        className={`label ${!isDark ? "dark" : "light"}`}
+        className={`label ${!isDarkTheme ? "dark" : "light"}`}
         htmlFor="checkbox"
       >
         <img className="sun" src={lightTheme} alt="" />
         <img className="moon" src={darkTheme} alt="" />
-        <div className={`ball ${isDark ? "dark" : "light"}`}></div>
+        <div className={`ball ${isDarkTheme ? "dark" : "light"}`}></div>
       </label>
     </div>
   );

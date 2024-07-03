@@ -1,10 +1,14 @@
-.projects {
+.projects,
+.projects-dark {
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #eaeaea;
+  background-color: var(--second-light-bc);
   padding: 170px 0;
+}
+.projects-dark {
+  background-color: var(--second-dark-bc);
 }
 .projects__content {
   display: flex;
@@ -13,11 +17,16 @@
 .projects__nav {
   font-size: 1.2rem;
   font-weight: 800;
-  color: blue;
+  color: var(--third-light-blue);
 }
-.projects__title {
+.projects__title,
+.projects__title-dark {
   font-size: 1.8rem;
   font-weight: 700;
+  color: var(--first-light-text-c);
+}
+.projects__title-dark {
+  color: var(--first-dark-text-c);
 }
 .projects__item {
   height: 40rem;

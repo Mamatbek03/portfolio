@@ -1,12 +1,21 @@
+import React from "react";
 import "./Projects.css";
-const Projcets = () => {
+import { useTranslation } from "react-i18next";
+
+interface ProjectsProps {
+  isDarkTheme: boolean;
+}
+const Projcets: React.FC<ProjectsProps> = ({ isDarkTheme }) => {
+  const { t } = useTranslation();
   return (
-    <div className="projects">
+    <div className={isDarkTheme ? "projects-dark" : "projects"}>
       <div className="projects__content">
         <div className="projects__head">
-          <h3 className="projects__nav">PROJECTS</h3>
-          <h3 className="projects__title">
-            Each project is a unique piece of development 🧩
+          <h3 className="projects__nav">{t("PROJECTS")}</h3>
+          <h3
+            className={isDarkTheme ? "projects__title-dark" : "projects__title"}
+          >
+            {t("Each project is a unique piece of development 🧩")}
           </h3>
         </div>
         <div className="projects__list">

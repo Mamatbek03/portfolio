@@ -6,7 +6,10 @@
   width: 100%;
   height: 130px;
   overflow: hidden;
-  background-color: #eaeaea;
+  background-color: var(--second-light-bc);
+}
+.dark {
+  background-color: var(--first-dark-bc);
 }
 
 .wave {
@@ -26,6 +29,7 @@
   z-index: 10;
   animation-delay: 0s;
   bottom: 0;
+  background-color: black;
 }
 .water2 {
   animation: wave-anime2 15s linear infinite;
@@ -34,6 +38,7 @@
   z-index: 10;
   animation-delay: -5s;
   bottom: 10px;
+  background-color: black;
 }
 .water3 {
   animation: wave-anime1 25s linear infinite;
@@ -42,6 +47,7 @@
   z-index: 10;
   animation-delay: -2s;
   bottom: 15px;
+  background-color: black;
 }
 .water4 {
   animation: wave-anime2 20s linear infinite;
@@ -50,6 +56,7 @@
   z-index: 10;
   animation-delay: -6s;
   bottom: 20px;
+  background-color: black;
 }
 
 @keyframes wave-anime1 {

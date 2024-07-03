@@ -5,44 +5,26 @@
   font-family: "Inter", sans-serif;
 }
 :root {
-  --first-light: #fff;
-  --second-light: #eaeaea;
+  --first-light-bc: #fff;
+  --second-light-bc: #eaeaea;
 
-  --first-dark: #000;
-  --second-dark: #5c5c5c;
+  --first-light-text-c: #000;
+  --second-light-text-c: #5c5c5c;
 
-  --third-light: rgb(62, 62, 255);
-  --third-dark: rgb(150, 150, 254);
+  --first-dark-bc: #232323;
+  --second-dark-bc: #474747;
+
+  --first-dark-text-c: #fff;
+  --second-dark-text-c: #c9c9c9;
+
+  --third-light-blue: #147efb;
+  --third-dark-blue: #0c60c0;
 }
+
 body[lang="ru"] {
   line-height: 1.2;
 }
 
 body[lang="en"] {
   line-height: 1.8;
-}
-
-.first-dark {
-  background-color: var(--first-dark);
-  color: var(--first-light);
-}
-.first-light {
-  background-color: var(--first-light);
-  color: var(--first-dark);
-}
-.second-dark {
-  background-color: var(--second-dark);
-  color: var(--second-light);
-}
-.second-light {
-  background-color: var(--second-light);
-  color: var(--second-dark);
-}
-.third-dark {
-  background-color: var(--third-dark);
-  color: var(--third-light);
-}
-.third-light {
-  background-color: var(--third-light);
-  color: var(--third-dark);
 }
