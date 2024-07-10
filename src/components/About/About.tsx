@@ -8,7 +8,7 @@ interface AboutProps {
 const About: React.FC<AboutProps> = ({ isDarkTheme }) => {
   const { t } = useTranslation();
   return (
-    <div className={`about ${isDarkTheme ? "dark" : ""}`}>
+    <div className={`${isDarkTheme ? "about-dark" : "about"}`}>
       <img className="about__work-img" src={WorkSpace} alt="" />
       <div className="about__text">
         <h3 className="about__nav">{t("ABOUT ME")}</h3>

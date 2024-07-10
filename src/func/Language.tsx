@@ -2,11 +2,12 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 
 interface LanguageProps {
-  className: string;
+  className?: string;
+  text?: string;
 }
 
-const Language: React.FC<LanguageProps> = ({ className }) => {
-  const { i18n, t } = useTranslation();
+const Language: React.FC<LanguageProps> = ({ className, text }) => {
+  const { i18n } = useTranslation();
 
   const currentLanguage = i18n.language;
 
@@ -16,9 +17,9 @@ const Language: React.FC<LanguageProps> = ({ className }) => {
   };
 
   return (
-    <button className={className} onClick={changeLanguage}>
-      {t("language")}
-    </button>
+    <span className={className} onClick={changeLanguage}>
+      {text}
+    </span>
   );
 };
 

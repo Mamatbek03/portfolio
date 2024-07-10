@@ -1,25 +1,31 @@
-import darkTheme from "../../assets/darkTheme.svg";
-import lightTheme from "../../assets/lightTheme.svg";
+import sun from "../../assets/sun.svg";
+import moon from "../../assets/moon.svg";
 import "./Theme.css";
 
 interface ThemeProps {
   isDarkTheme: boolean;
   toggleTheme: () => void;
+  big?: boolean;
 }
 
-const Theme: React.FC<ThemeProps> = ({ isDarkTheme, toggleTheme }) => {
+const Theme: React.FC<ThemeProps> = ({ isDarkTheme, toggleTheme, big }) => {
   return (
     <div>
-      <input id="checkbox" type="checkbox" />
-      <label
+      <div
         onClick={toggleTheme}
-        className={`label ${!isDarkTheme ? "dark" : "light"}`}
-        htmlFor="checkbox"
+        className={`${big ? "toggle-big" : "toggle"} ${
+          !isDarkTheme ? "dark" : "light"
+        }`}
       >
-        <img className="sun" src={lightTheme} alt="" />
-        <img className="moon" src={darkTheme} alt="" />
-        <div className={`ball ${isDarkTheme ? "dark" : "light"}`}></div>
-      </label>
+        <img className={`${big ? "sun-big" : "sun"}`} src={sun} alt="" />
+        <img className={`${big ? "moon-big" : "moon"}`} src={moon} alt="" />
+        <div
+          className={`${big ? "ball-big" : "ball"} ${
+            isDarkTheme ? "dark m-right" : "light m-left"
+          }
+          `}
+        ></div>
+      </div>
     </div>
   );
 };

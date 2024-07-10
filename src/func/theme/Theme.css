@@ -1,20 +1,6 @@
-* {
-  box-sizing: border-box;
-}
-
-#checkbox {
-  opacity: 0;
-  position: absolute;
-}
-#checkbox:checked + .label .ball {
-  transform: translateX(24px);
-}
-
-.label {
+.toggle {
   position: relative;
-  width: 50px;
-  height: 26px;
-  background-color: black;
+  width: 53px;
   border-radius: 50px;
   display: flex;
   align-items: center;
@@ -22,28 +8,60 @@
   padding: 3px;
   cursor: pointer;
 }
+
 .ball {
   position: absolute;
-  width: 22px;
-  height: 22px;
-  top: 2px;
-  left: 2px;
-  border-radius: 50px;
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
   transition: transform 0.3s linear;
   background-color: #fff;
 }
+
 .sun {
   width: 21px;
   height: 22px;
 }
+
 .moon {
   width: 20px;
   height: 20px;
+  padding-right: 2px;
 }
 
 .dark {
   background-color: black;
 }
+
 .light {
   background-color: white;
+}
+
+.m-left {
+  transform: translateX(0);
+}
+
+.m-right {
+  transform: translateX(25px);
+}
+@media (max-width: 900px) {
+  .toggle {
+    width: 82px;
+    padding: 5px;
+  }
+  .ball {
+    width: 32px;
+    height: 32px;
+  }
+  .sun {
+    width: 32px;
+    height: 32px;
+  }
+  .moon {
+    width: 32px;
+    height: 32px;
+  }
+  .m-right {
+    transform: translateX(40px);
+  }
 }

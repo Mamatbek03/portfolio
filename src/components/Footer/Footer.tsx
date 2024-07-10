@@ -10,7 +10,8 @@ const Footer = () => {
       <div className="footer">
         <div className="footer-container">
           <div className="footer-text">
-            Copyright © 2024. All rights are reserved
+            <span className="footer-text-first">Copyright © 2024.</span>{" "}
+            <span className="footer-text-second">All rights are reserved</span>
           </div>
           <div className="footer-links">
             <a href="">

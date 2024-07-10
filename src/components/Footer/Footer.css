@@ -31,3 +31,19 @@
   filter: brightness(0) saturate(100%) invert(18%) sepia(88%) saturate(6222%)
     hue-rotate(200deg) brightness(101%) contrast(101%);
 }
+@media (max-width: 800px) {
+  .footer-container {
+    text-align: center;
+    flex-direction: column-reverse;
+  }
+  .footer-links {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 426px) {
+  .footer-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.8rem;
+  }
+}

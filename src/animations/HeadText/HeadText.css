@@ -35,3 +35,10 @@
     transform: rotate(0deg);
   }
 }
+
+@media (max-width: 550px) {
+  .wave-hand {
+    width: 45px;
+    height: 45px;
+  }
+}

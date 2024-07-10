@@ -90,30 +90,34 @@ const Home: React.FC<HomeProps> = ({ isDarkTheme }) => {
           {t("Tech Stack")}
         </span>
         <ul className="home__stack-icons">
-          <li>
-            <img className="home__stack-icon" src={Html} alt="" />
-          </li>
-          <li>
-            <img className="home__stack-icon" src={Css} alt="" />
-          </li>
-          <li>
-            <img className="home__stack-icon" src={JavaScript} alt="" />
-          </li>
-          <li>
-            <img className="home__stack-icon" src={TypeScript} alt="" />
-          </li>
-          <li>
-            <img className="home__stack-icon" src={ReactLight} alt="" />
-          </li>
-          <li>
-            <img className="home__stack-icon" src={NodeJsLight} alt="" />
-          </li>
-          <li>
-            <img className="home__stack-icon" src={Webpack} alt="" />
-          </li>
-          <li>
-            <img className="home__stack-icon" src={ViteLight} alt="" />
-          </li>
+          <div className="home__stack-first-icons">
+            <li>
+              <img className="home__stack-icon" src={Html} alt="" />
+            </li>
+            <li>
+              <img className="home__stack-icon" src={Css} alt="" />
+            </li>
+            <li>
+              <img className="home__stack-icon" src={JavaScript} alt="" />
+            </li>
+            <li>
+              <img className="home__stack-icon" src={TypeScript} alt="" />
+            </li>
+          </div>
+          <div className="home__stack-second-icons">
+            <li>
+              <img className="home__stack-icon" src={ReactLight} alt="" />
+            </li>
+            <li>
+              <img className="home__stack-icon" src={NodeJsLight} alt="" />
+            </li>
+            <li>
+              <img className="home__stack-icon" src={Webpack} alt="" />
+            </li>
+            <li>
+              <img className="home__stack-icon" src={ViteLight} alt="" />
+            </li>
+          </div>
         </ul>
       </div>
     </div>

@@ -7,6 +7,9 @@
   background-color: var(--second-light-bc);
   padding: 170px 0;
 }
+/* .projects__head {
+  margin: 0 5%;
+} */
 .projects-dark {
   background-color: var(--second-dark-bc);
 }
@@ -32,4 +35,12 @@
   height: 40rem;
   background-color: white;
   border-radius: 10px;
+}
+@media (max-width: 900px) {
+  .projects__content {
+    padding: 0 5%;
+  }
+  .projects__head {
+    text-align: center;
+  }
 }

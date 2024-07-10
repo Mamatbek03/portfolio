@@ -10,8 +10,6 @@ const App = () => {
   if (!localStorage.getItem("theme")) {
     localStorage.setItem("theme", "light");
   }
-  console.log(!!localStorage.getItem("theme"));
-  console.log(localStorage.getItem("theme"));
 
   const [isDarkTheme, setDarkTheme] = useState<boolean>(
     localStorage.getItem("theme") === "dark" || false
@@ -22,7 +20,7 @@ const App = () => {
   };
 
   return (
-    <>
+    <div>
       <Navbar isDarkTheme={isDarkTheme} toggleTheme={toggleTheme} />
       <Element name="home">
         <Home isDarkTheme={isDarkTheme} />
@@ -37,7 +35,7 @@ const App = () => {
         <Contacts isDarkTheme={isDarkTheme} />
       </Element>
       <Footer />
-    </>
+    </div>
   );
 };
 
