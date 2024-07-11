@@ -55,7 +55,7 @@ const Contacts: React.FC<ContactsProps> = ({ isDarkTheme }) => {
                       ? "contacts__contact-link-dark"
                       : "contacts__contact-link"
                   }
-                  href=""
+                  href="mailto:kamytov.m.d@gmail.com"
                 >
                   kamytov.m.d@gmail.com
                 </a>
@@ -79,7 +79,8 @@ const Contacts: React.FC<ContactsProps> = ({ isDarkTheme }) => {
                       ? "contacts__contact-link-dark"
                       : "contacts__contact-link"
                   }
-                  href=""
+                  href="#"
+                  onClick={(e) => e.preventDefault()}
                 >
                   +996 507 24 12 03
                 </a>

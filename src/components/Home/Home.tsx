@@ -56,21 +56,36 @@ const Home: React.FC<HomeProps> = ({ isDarkTheme }) => {
             <img className="home__job-flag" src={FlagKyrgyzstan} alt="" />
           </p>
           <div className="home__job-links">
-            <a href="">
+            <a
+              aria-label="telegram"
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://t.me/Mamatbek"
+            >
               <img
                 className="home__job-link"
                 src={isDarkTheme ? TelegramDark : TelegramLight}
                 alt=""
               />
             </a>
-            <a href="">
+            <a
+              aria-label="github"
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://github.com/Mamatbek03"
+            >
               <img
                 className="home__job-link"
                 src={isDarkTheme ? GithubDark : GithubLight}
                 alt=""
               />
             </a>
-            <a href="">
+            <a
+              aria-label="linkedin"
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://www.linkedin.com/in/маматбек-камытов-6a801a2a4/?locale=en_US"
+            >
               <img
                 className="home__job-link"
                 src={isDarkTheme ? LinkedInDark : LinkedInLight}
